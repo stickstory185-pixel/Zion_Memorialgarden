@@ -1,0 +1,48 @@
+<div class="edit-profile-container">
+    <div class="edit-profile-header">
+        <h2>Edit Profile</h2>
+        <button type="button" class="close-edit-profile" id="closeEditProfileBtn">&times;</button>
+    </div>
+
+    <div class="edit-profile-content">
+        <!-- Profile Picture Section -->
+        <div class="avatar-section">
+            <div class="avatar-wrapper">
+                <img id="avatarPreview"src="assets/images/default-avatar.png"alt="Profile Picture"class="avatar-image">
+                <button type="button" id="changeAvatarBtn" class="change-avatar-btn"> Change Photo
+                </button>
+            </div>
+            <!-- Hidden file input -->
+            <input type="file" id="avatarInput" accept="image/*" style="display: none;">
+        </div>
+
+        <!-- Edit Form -->
+        <form id="editProfileForm" class="edit-profile-form">
+            <div class="form-group">
+                <label for="editFullName">Full Name *</label>
+                <input type="text" id="editFullName" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="editUsername">Username *</label>
+                <input type="text" id="editUsername" placeholder="Enter your username" required>
+            </div>
+
+            <div class="form-group">
+                <label for="editEmail">Email Address</label>
+                <input type="email" id="editEmail" placeholder="Email" readonly>
+            </div>
+
+            <div class="form-group">
+                <label for="editPhone">Phone Number</label>
+                <input type="text" id="editPhone" placeholder="09XXXXXXXXX" maxlength="11">
+            </div>
+
+            <div class="form-actions" style="display: flex; gap: 12px; align-items: center; justify-content: space-between; margin-top: 24px; flex-wrap: wrap;">
+                <button type="button" class="change-password-trigger-btn" id="editProfileChangePasswordBtn" style="background: #ffffff; border: 1.5px solid #2d5a27; color: #2d5a27; padding: 10px 18px; border-radius: 6px; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; font-size: 0.88rem; transition: all 0.2s ease;"> Change Password
+                </button>
+                <button type="submit" class="save-profile-btn" id="saveProfileBtn">Save Changes</button>
+            </div>
+        </form>
+    </div>
+</div>
